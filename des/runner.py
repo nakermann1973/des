@@ -19,8 +19,8 @@ class ScriptRunner(object):
             result = check_output(
                 script,
                 stderr=STDOUT,
-                env=envarg,
-                shell=True)
+                text=True,
+                env=envarg)
             return result
         except CalledProcessError as err:
             logger.error('Script '+script+' Failed! Exit='+ \
