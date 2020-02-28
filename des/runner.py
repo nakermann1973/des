@@ -19,7 +19,7 @@ class ScriptRunner(object):
             result = check_output(
                 script,
                 stderr=STDOUT,
-                text=True,
+                universal_newlines=True,
                 env=envarg)
             return result
         except CalledProcessError as err:
