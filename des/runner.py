@@ -47,4 +47,5 @@ class ScriptRunner(object):
 
         logger.info('Running script ' + script)
         logger.debug('Script ENV: ' + str(env_dict))
-        self.script_exec(script, env_dict)
+        output = self.script_exec(script, env_dict)
+        print(output)
