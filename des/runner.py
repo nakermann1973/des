@@ -40,7 +40,7 @@ class ScriptRunner(object):
                  sep + str(event_dict.get('Action')).split(':')[0]
 
         if exists(script) == False:
-            logger.warning('Unable to handle event! No script exists at ' + script)
+            logger.debug('Unable to handle event! No script exists at ' + script)
             return
         
         env_dict = self.build_env(event_dict)
