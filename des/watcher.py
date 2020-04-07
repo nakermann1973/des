@@ -18,7 +18,7 @@ class Watcher(object):
                  tls_config=None):
 
         self.endpoint = endpoint
-        self.client = docker.Client(
+        self.client = docker.APIClient(
             base_url=endpoint,
             version=api_version,
             timeout=http_timeout,
